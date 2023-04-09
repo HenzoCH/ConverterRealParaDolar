@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            border-radius: 500px;
+            width: auto;
+        }
+        div{
+            background-color: #c1f0a9;
+            padding: 20px;
+            text-align: center;
+            width: 600px;
+            position: absolute;
+            right: 30%;
+            left: 30%;
+        }
+    </style>
+    <script>
+        function converter(){
+            var real=document.getElementById('ValorEmReal').value;
+            dolar=eval(real)/5.06;
+            document.getElementById('ValorEmDolar').innerHTML = "U$"+dolar.toFixed(2);
+
+	}
+    </script>
+    <title>Real para dolar</title>
+</head>
+<body>
+    <div id="realedolar">
+        <h1>Real</h1>
+        <img src="./moedade1real.jpeg" alt="Moeda de 1 real">
+        <br>
+        <input type="text" id="ValorEmReal" placeholder="Escreva o valor em real">
+        <button onclick="converter()">Converter</button>
+        <h1>Dolar</h1>
+        <h2>O valor em dolar: </h2>
+        <p id="ValorEmDolar"></p>
+    </div>
+</body>
+</html>
